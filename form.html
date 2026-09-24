@@ -2,19 +2,55 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Form</title>
+    <title>Form Pendaftaran</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Form Input</h1>
+    <h1>Form Pendaftaran</h1>
 
     <p><a href="profil.html">Kembali ke Profil</a></p>
 
     <form action="proses.php" method="post">
-        <input type="text" name="username" placeholder="Masukkan username">
-        <br><br>
-        <input type="submit" value="Kirim">
+
+        <p>
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" required>
+        </p>
+
+        <p>
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="laki" name="jk" value="L" required>
+            <label for="laki">Laki-laki</label>
+
+            <input type="radio" id="perempuan" name="jk" value="P">
+            <label for="perempuan">Perempuan</label>
+        </p>
+
+        <p>
+            <label for="prodi">Program Studi:</label><br>
+            <select id="prodi" name="prodi" required>
+                <option value="">-- Pilih Prodi --</option>
+                <option value="informatika">Informatika</option>
+                <option value="sistem_informasi">Sistem Informasi</option>
+                <option value="teknik_komputer">Teknik Industri</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+        </p>
+
+        <p>
+            <label for="alasan">Alasan Mendaftar:</label><br>
+            <textarea id="alasan" name="alasan" rows="4" cols="30" placeholder="Tulis alasan..." required></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Kirim">
+        </p>
+
     </form>
 
 </body>
