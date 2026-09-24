@@ -7,3 +7,11 @@ p.bio {
     color: #444;
     font-style: italic;
 }
+
+.kontainer-profil {
+    border-radius: 10px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
