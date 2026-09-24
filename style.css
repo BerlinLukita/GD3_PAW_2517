@@ -1,8 +1,9 @@
-body {
-    font-family: Verdana, sans-serif;
+#judul {
+    color: green;
+    text-align: center;
 }
 
-h1 {
-    color: rgb(43, 43, 240);
-    text-align: center;
+p.bio {
+    color: #444;
+    font-style: italic;
 }
