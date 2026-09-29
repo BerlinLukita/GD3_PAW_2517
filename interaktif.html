@@ -6,34 +6,36 @@
 </head>
 <body>
 
-  
     <h1 id="judulHalaman">Halaman Interaktif Saya</h1>
 
-    <p>Buka Console (F12) untuk melihat hasil JavaScript.</p>
+    <p>
+        <a href="profil.html" onclick="return konfirmasiPindah()">Profil</a> |
+        <a href="form.html" onclick="return konfirmasiPindah()">Form</a>
+    </p>
 
-    
     <p id="teks">Teks ini bisa berubah</p>
     <button onclick="ubahBiru()">Ubah ke Biru</button>
 
     <hr>
 
     <h2>Input Nama</h2>
-    <input type="text" id="inputNama" placeholder="Masukkan nama">
+    <input type="text" id="inputNama">
     <button onclick="tampilkanNama()">Tampilkan</button>
+
+    <hr>
+
+    <h2>Hitung Kuadrat</h2>
+    <input type="number" id="angka">
+    <button onclick="hitungKuadrat()">Hitung</button>
+
+    <p id="hasil"></p>
 
     <script>
         const judul = document.getElementById("judulHalaman");
         judul.style.color = "red";
-        console.log(judul.innerHTML);
-
-        function sapa(nama) {
-            return "Halo, " + nama + "!";
-        }
-        console.log(sapa("Berlin Lukita"));
 
         function ubahBiru() {
-            const teks = document.getElementById("teks");
-            teks.style.color = "blue";
+            document.getElementById("teks").style.color = "blue";
         }
 
         function tampilkanNama() {
@@ -46,6 +48,20 @@
             }
         }
 
+        function hitungKuadrat() {
+            const angka = document.getElementById("angka").value;
+
+            if (angka === "") {
+                alert("Masukkan angka dulu!");
+            } else {
+                document.getElementById("hasil").innerHTML =
+                    "Hasil: " + (angka * angka);
+            }
+        }
+
+        function konfirmasiPindah() {
+            return confirm("Yakin ingin pindah halaman?");
+        }
     </script>
 
 </body>
