@@ -6,12 +6,20 @@
 </head>
 <body>
 
+  
     <h1 id="judulHalaman">Halaman Interaktif Saya</h1>
 
     <p>Buka Console (F12) untuk melihat hasil JavaScript.</p>
 
+    
     <p id="teks">Teks ini bisa berubah</p>
     <button onclick="ubahBiru()">Ubah ke Biru</button>
+
+    <hr>
+
+    <h2>Input Nama</h2>
+    <input type="text" id="inputNama" placeholder="Masukkan nama">
+    <button onclick="tampilkanNama()">Tampilkan</button>
 
     <script>
         const judul = document.getElementById("judulHalaman");
@@ -26,6 +34,16 @@
         function ubahBiru() {
             const teks = document.getElementById("teks");
             teks.style.color = "blue";
+        }
+
+        function tampilkanNama() {
+            const nama = document.getElementById("inputNama").value;
+
+            if (nama === "") {
+                alert("Silakan isi nama dulu.");
+            } else {
+                alert("Halo, " + nama + "!");
+            }
         }
 
     </script>
