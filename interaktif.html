@@ -10,8 +10,10 @@
 
     <p>Buka Console (F12) untuk melihat hasil JavaScript.</p>
 
-    <script>
+    <p id="teks">Teks ini bisa berubah</p>
+    <button onclick="ubahBiru()">Ubah ke Biru</button>
 
+    <script>
         const judul = document.getElementById("judulHalaman");
         judul.style.color = "red";
         console.log(judul.innerHTML);
@@ -19,8 +21,12 @@
         function sapa(nama) {
             return "Halo, " + nama + "!";
         }
-
         console.log(sapa("Berlin Lukita"));
+
+        function ubahBiru() {
+            const teks = document.getElementById("teks");
+            teks.style.color = "blue";
+        }
 
     </script>
 
