@@ -5,18 +5,23 @@
     <title>Halaman Interaktif</title>
 </head>
 <body>
-    
+
     <h1 id="judulHalaman">Halaman Interaktif Saya</h1>
 
     <p>Buka Console (F12) untuk melihat hasil JavaScript.</p>
 
     <script>
-        
+
         const judul = document.getElementById("judulHalaman");
-
         judul.style.color = "red";
-
         console.log(judul.innerHTML);
+
+        function sapa(nama) {
+            return "Halo, " + nama + "!";
+        }
+
+        console.log(sapa("Berlin Lukita"));
+
     </script>
 
 </body>
